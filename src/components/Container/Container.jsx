@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Container.module.css';
 
-export class Container extends Component {
-  render() {
-    const { children } = this.props;
-    return <div className={styles.container}>{children}</div>;
-  }
-}
+export const Container = ({ children }) => {
+  return <div className={styles.container}>{children}</div>;
+};
 
 Container.propTypes = {
   children: PropTypes.node,
